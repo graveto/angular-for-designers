@@ -14,8 +14,15 @@
       <div layout="row" layout-align="center start">
         <div flex-gt-sm="80" flex-sm="90" layout-fill>
           <md-card>
-            <md-card-content>
-              <h1>2 + 2 = {{2 + 2}}</h1>
+            <md-card-content ng-controller="MainCtrl as ctrl">
+              <md-list>
+                <md-list-item class="md-2-line" ng-repeat="item in ctrl.items">
+                  <div class="md-list-item-text">
+                    <h3>{{item.label}}</h3>
+                    <p>{{item.description}}</p>
+                  </div>
+                </md-list-item>
+              </md-list>
             </md-card-content>
           </md-card>
         </div>
